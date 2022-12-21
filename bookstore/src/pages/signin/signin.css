@@ -1,0 +1,225 @@
+.main-container-signin {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  /* UI Properties */
+  background: #000000 0% 0% no-repeat padding-box;
+  opacity: 0.31;
+}
+
+.app-logo {
+  position: absolute;
+  top: 25vh;
+  left: 25vw;
+  width: 50vw;
+  height: 391px;
+  /* UI Properties */
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  border-radius: 21px;
+  opacity: 1;
+}
+
+.signin-image {
+  position: absolute;
+  top: 52px;
+  left: 53px;
+  width: 245px;
+  height: 245px;
+  border-radius: 50%;
+}
+
+.content {
+  position: absolute;
+  top: 328px;
+  left: 71px;
+  width: 209px;
+  height: 24px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal medium 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: #0a0102;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.login-box {
+  position: absolute;
+  top: 22vh;
+  left: 50vw;
+  width: 28vw;
+  height: 425px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 15px #00000029;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.login-btn {
+  /* Layout Properties */
+  position: absolute;
+  top: 28px;
+  left: 69px;
+  /* width: 72px; */
+  height: 33px;
+  /* UI Properties */
+  text-align: left;
+  /* font-family: "Roboto", sans-serif; */
+  font: normal normal normal 25px/33px Roboto;
+  /* font-style: medium;
+  font-size: 25px; */
+  border: 0;
+  background: white;
+  font-weight: bold;
+  line-height: 33px;
+  letter-spacing: 0px;
+  color: #0a0102;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.signup-btn {
+  position: absolute;
+  left: 223px;
+}
+
+.email-input {
+  position: absolute !important;
+  top: 104px;
+  left: 69px;
+  width: 252px;
+  height: 35px;
+  /* UI Properties */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e2e2e2;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.password-input {
+  position: absolute !important;
+  top: 167px;
+}
+
+.mail-input {
+  position: absolute !important;
+  top: 167px;
+  /* top: 231px; */
+}
+.passW-input {
+  position: absolute !important;
+  top: 231px;
+  /* top: 295px; */
+}
+.Mobilenum-input {
+  position: absolute !important;
+  top: 295px;
+  /* top: 359px; */
+}
+.main-Signup-btn {
+  position: absolute;
+  top: 359px;
+  /* top: 423px; */
+  left: 69px;
+  width: 252px;
+  height: 37px;
+  /* UI Properties */
+  background: #a03037 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+  border: 0px;
+  color: whitesmoke;
+}
+.forgot-password {
+  /* Layout Properties */
+  position: absolute;
+  top: 207px;
+  left: 240px;
+  width: 81px;
+  height: 13px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal normal 10px/13px Roboto;
+  letter-spacing: 0px;
+  color: #9d9d9d;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.main-login-btn {
+  /* Layout Properties */
+  position: absolute;
+  top: 237px;
+  left: 69px;
+  width: 252px;
+  height: 37px;
+  /* UI Properties */
+  background: #a03037 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1;
+  border: 0px;
+  color: whitesmoke;
+}
+
+.login-divider {
+  position: absolute;
+  top: 300px;
+  left: 98px;
+  width: 191px;
+  height: 18px;
+  opacity: 1;
+}
+
+.dash-1 {
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  width: 64px;
+  height: 0px;
+  /* UI Properties */
+  border: 1px solid #e1e4ea;
+  opacity: 1;
+}
+
+.dash-2 {
+  position: absolute;
+  left: 127px;
+}
+
+.word-or {
+  /* Layout Properties */
+  position: absolute;
+  top: 0px;
+  left: 85px;
+  width: 22px;
+  height: 18px;
+  /* UI Properties */
+  text-align: left;
+  font: normal normal bold 14px/18px Meiryo UI;
+  letter-spacing: 0px;
+  color: #343434;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.faceBook-button {
+  position: absolute;
+  top: 345px;
+  left: 69px;
+  width: 126px;
+  height: 37px;
+  /* UI Properties */
+  background: #4266b2 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  border: 0px;
+  opacity: 1;
+  color: whitesmoke;
+}
+.google-button {
+  position: absolute;
+  left: 202px;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  color: black;
+}

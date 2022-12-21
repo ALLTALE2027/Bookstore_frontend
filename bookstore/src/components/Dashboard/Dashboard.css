@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  /* margin: 0 8%; */
+}
+
+.change-display {
+  display: inline-block;
+  /* margin-left: 8%;
+    margin-right: 8%; */
+}
+
+.Books {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.book-count {
+  font-size: 0.7rem;
+}
+.change-display-left {
+  margin-left: 6%;
+}
+.change-display-right {
+  margin-right: 6%;
+}

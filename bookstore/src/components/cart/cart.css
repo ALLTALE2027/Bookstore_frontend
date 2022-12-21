@@ -1,0 +1,143 @@
+.main-container-cart {
+  display: flex;
+  width: 50%;
+  margin-left: 6%;
+  margin-top: 2%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.first-div {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid #dcdcdc;
+  padding-bottom: 3%;
+}
+.mycart-location {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1%;
+  padding-bottom: 3%;
+}
+
+.cart-count {
+  display: flex;
+  align-items: center;
+}
+
+.select-location {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dcdcdc;
+  margin-right: 3%;
+}
+
+.sort-by-cartlocation {
+  border: 0 !important;
+}
+
+.book-details-cart {
+  display: flex;
+  gap: 5%;
+  padding-bottom: 3%;
+}
+.book-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.incart-author {
+  text-align: left;
+  color: #9d9d9d;
+  font-size: 0.8rem;
+}
+
+.incart-price {
+  text-align: left;
+}
+
+.incart-price {
+  font-size: 1.2rem;
+}
+.incart-discount {
+  font-size: 0.8rem;
+}
+
+.quantity-buttons {
+  display: flex;
+  margin-left: 20%;
+  gap: 5%;
+  padding-bottom: 3%;
+}
+
+.quantity-button-cart {
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+}
+
+.remove-btn {
+  text-align: left;
+  color: #0a0102;
+  border: 1px solid #dbdbdb;
+}
+
+.book-count-cart {
+  display: inline-block;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  width: 60%;
+}
+.btnsAndcount-cart {
+  display: flex;
+  width: 15%;
+  gap: 4px;
+}
+
+.placeorder-cart {
+  margin-left: 81%;
+  background: #3371b5 0% 0% no-repeat padding-box;
+  width: 16%;
+}
+.order-btn-cart {
+  border-radius: 2px;
+  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 4% 0;
+}
+
+.second-div {
+  border: 1px solid #dcdcdc;
+  border-radius: 1px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.address-cart {
+}
+
+.third-div {
+  border: 1px solid #dcdcdc;
+  border-radius: 1px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.ordersummary-cart {
+}
+
+.cart-header {
+  margin-top: 3%;
+  margin-left: 6%;
+  display: flex;
+  align-items: flex-start;
+}
+.home-route {
+  color: #9d9d9d;
+}
