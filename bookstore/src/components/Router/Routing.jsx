@@ -4,6 +4,7 @@ import Signin from "../../pages/signin/Signin";
 import Signup from "../../pages/signup/Signup";
 import Bookview from "../Bookview/Bookview";
 import Cart from "../cart/Cart";
+import Customerdetails from "../CustomerDetails/Customerdetails";
 import Dashboard from "../Dashboard/Dashboard";
 
 const Routing = () => {
@@ -15,6 +16,7 @@ const Routing = () => {
         <Route path="/home" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/bookview" element={<Bookview />} />
+        <Route path="/customer" element={<Customerdetails />} />
       </Routes>
     </div>
   );

@@ -1,6 +1,6 @@
 .main-container-cart {
   display: flex;
-  width: 50%;
+  width: 65vw;
   margin-left: 6%;
   margin-top: 2%;
   flex-direction: column;
@@ -41,7 +41,7 @@
 .book-details-cart {
   display: flex;
   gap: 5%;
-  padding-bottom: 3%;
+  padding-bottom: 2%;
 }
 .book-details {
   display: flex;
@@ -59,7 +59,7 @@
 }
 
 .incart-price {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .incart-discount {
   font-size: 0.8rem;
@@ -67,7 +67,7 @@
 
 .quantity-buttons {
   display: flex;
-  margin-left: 20%;
+  margin-left: 17.5%;
   gap: 5%;
   padding-bottom: 3%;
 }
@@ -140,4 +140,9 @@
 }
 .home-route {
   color: #9d9d9d;
+}
+
+.allCartBooks {
+  display: flex;
+  flex-direction: column;
 }

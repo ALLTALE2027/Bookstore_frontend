@@ -11,6 +11,7 @@ import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutl
 import educationlogo from "./bookLogo.png";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -55,8 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 function Header() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
+  let navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }} className="BoxOuter">
       <AppBar
@@ -89,7 +89,12 @@ function Header() {
               />
             </Search>
           </Box>
-          <Box className="cartLogoDiv">
+          <Box
+            className="cartLogoDiv"
+            onClick={() => {
+              navigate("/cart");
+            }}
+          >
             <div className="iconBox1">
               <Person2OutlinedIcon />
               <span>Profile</span>

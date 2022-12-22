@@ -15,8 +15,12 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import { height, margin } from "@mui/system";
 import profilepic from "./profilePic.jpg";
 import Header from "../Header/Header";
+import { addToCartAPI } from "../../services/cartservices";
 
 const Bookview = ({ book }) => {
+  const addtoCartCall = async (id) => {
+    await addToCartAPI(id);
+  };
   return (
     <>
       <Header />
@@ -40,8 +44,12 @@ const Bookview = ({ book }) => {
           </Card>
 
           <Box className="button-class">
-            <Button variant="contained" className="buttons">
-              Add To Bag
+            <Button
+              variant="contained"
+              className="buttons"
+              onClick={() => addtoCartCall(book._id)}
+            >
+              Add To Cart
             </Button>
             <Button variant="contained" className="buttons button2">
               <FavoriteIcon className="favButton" />
