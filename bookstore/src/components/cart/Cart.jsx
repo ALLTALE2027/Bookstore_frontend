@@ -4,7 +4,12 @@ import "./cart.css";
 import cartBook from "./mini-book-cart.png";
 import Header from "../Header/Header";
 import Customerdetails from "../CustomerDetails/Customerdetails";
-import { getCartDetailsAPI } from "../../services/cartservices";
+import {
+  getCartDetailsAPI,
+  addToCartAPI,
+  removeFromCartAPI,
+  deleteFromCartAPI,
+} from "../../services/cartservices";
 
 const Cart = () => {
   const [addAddress, setAddAddress] = useState(false);
@@ -12,15 +17,25 @@ const Cart = () => {
     setAddAddress(true);
   };
   const [bookArray, setBookArray] = useState([]);
-  const [cartBooks, setcartBooks] = useState({});
 
+  const incrementBookQuantity = async (id) => {
+    await addToCartAPI(id);
+    getBooksFromCart();
+  };
+  const decrementBookQuantity = async (id) => {
+    await removeFromCartAPI(id);
+    getBooksFromCart();
+  };
+
+  const onRemoveBook = async (id) => {
+    await deleteFromCartAPI(id);
+    getBooksFromCart();
+  };
   const getBooksFromCart = () => {
     getCartDetailsAPI()
       .then((response) => {
         console.log("books array", response);
         setBookArray(response.data.data.books);
-
-        setcartBooks(response);
       })
       .catch((err) => {
         console.log(err);
@@ -53,13 +68,13 @@ const Cart = () => {
           </div>
           <div className="allCartBooks">
             {bookArray.map((book) => (
-              <>
+              <div key={book._id}>
                 <div className="book-details-cart">
                   <div className="change-display-left">
                     <img src={cartBook} alt="cart book" />
                   </div>
                   <div className="book-details">
-                    <div>{book.bookName}</div>
+                    <div className="book-name-cart">{book.bookName}</div>
                     <div className="incart-author"> by {book.author}</div>
                     <div className="incart-price">
                       <span className="incart-price">Rs.1500 </span>
@@ -71,15 +86,32 @@ const Cart = () => {
                 </div>
                 <div className="quantity-buttons">
                   <div className="btnsAndcount-cart">
-                    <button className="quantity-button-cart">-</button>
-                    <span className="book-count-cart">1</span>
-                    <button className="quantity-button-cart">+</button>
+                    <button
+                      className="quantity-button-cart"
+                      onClick={() => decrementBookQuantity(book._id)}
+                    >
+                      -
+                    </button>
+                    <span className="book-count-cart">{book.quantity}</span>
+                    <button
+                      className="quantity-button-cart"
+                      onClick={() => {
+                        incrementBookQuantity(book._id);
+                      }}
+                    >
+                      +
+                    </button>
                   </div>
                   <div>
-                    <button className="remove-btn">Remove</button>
+                    <button
+                      className="remove-btn"
+                      onClick={() => onRemoveBook(book._id)}
+                    >
+                      Remove
+                    </button>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
           </div>
           <div className="placeorder-cart">

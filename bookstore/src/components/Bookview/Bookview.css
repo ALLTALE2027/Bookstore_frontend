@@ -170,3 +170,22 @@ textarea {
 .review-bookview {
   width: 8% !important;
 }
+
+.btnsAndcount-bookview {
+  display: flex;
+  width: 40%;
+  gap: 5px;
+}
+
+.book-count-bookview {
+  display: inline-block;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  width: 50%;
+}
+
+.quantity-button-bookview {
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  width: 30%;
+}

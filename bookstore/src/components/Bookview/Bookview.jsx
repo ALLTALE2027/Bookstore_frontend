@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import SmallBookImage from "./mini-book.png";
 import SmallBookImage2 from "./mini-book-2.png";
@@ -18,8 +18,10 @@ import Header from "../Header/Header";
 import { addToCartAPI } from "../../services/cartservices";
 
 const Bookview = ({ book }) => {
+  const [buttonToggle, setButtonToggle] = useState(false);
   const addtoCartCall = async (id) => {
     await addToCartAPI(id);
+    setButtonToggle(true);
   };
   return (
     <>
@@ -44,13 +46,22 @@ const Bookview = ({ book }) => {
           </Card>
 
           <Box className="button-class">
-            <Button
-              variant="contained"
-              className="buttons"
-              onClick={() => addtoCartCall(book._id)}
-            >
-              Add To Cart
-            </Button>
+            {!buttonToggle && (
+              <Button
+                variant="contained"
+                className="buttons"
+                onClick={() => addtoCartCall(book._id)}
+              >
+                Add To Cart
+              </Button>
+            )}
+            {buttonToggle && (
+              <div className="btnsAndcount-bookview">
+                <button className="quantity-button-bookview">-</button>
+                <span className="book-count-bookview">{book.quantity}</span>
+                <button className="quantity-button-bookview">+</button>
+              </div>
+            )}
             <Button variant="contained" className="buttons button2">
               <FavoriteIcon className="favButton" />
               Wishlist
