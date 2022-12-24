@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import SmallBookImage from "./mini-book.png";
 import SmallBookImage2 from "./mini-book-2.png";
@@ -15,19 +15,57 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import { height, margin } from "@mui/system";
 import profilepic from "./profilePic.jpg";
 import Header from "../Header/Header";
-import { addToCartAPI } from "../../services/cartservices";
+import {
+  addToCartAPI,
+  addToWishlistAPI,
+  getWishlistDetailsAPI,
+} from "../../services/cartservices";
+import { useNavigate } from "react-router-dom";
 
 const Bookview = ({ book }) => {
   const [buttonToggle, setButtonToggle] = useState(false);
+  const [wishlistedBooks, setWishlistedBooks] = useState([]);
+  const [wishlisted, setWishlisted] = useState({});
+  const navigate = useNavigate();
+
   const addtoCartCall = async (id) => {
     await addToCartAPI(id);
     setButtonToggle(true);
   };
+
+  const addToWishlist = async (id) => {
+    await addToWishlistAPI(id);
+    setWishlisted({ color: "red" });
+  };
+
+  const getWishlistBooks = async () => {
+    let response = await getWishlistDetailsAPI();
+    console.log("Wishlisted", response);
+    setWishlistedBooks(response.data.data.books);
+    ifBookWishlisted();
+  };
+
+  const ifBookWishlisted = () => {
+    wishlistedBooks.forEach((wish) => {
+      if (wish._id.toString() === book._id.toString()) {
+        console.log("bookview ", wish.bookName);
+        setWishlisted({ color: "red" });
+      }
+    });
+  };
+
+  useEffect(() => {
+    console.log("effect bookview");
+    getWishlistBooks();
+    console.log(wishlisted);
+  }, []);
+
   return (
     <>
       <Header />
       <div className="Bookview-header">
-        <span>Home/Book(01) </span>
+        <span onClick={() => navigate("/Home")}>Home/</span>
+        <span>Book(01) </span>
       </div>
       <Box className="Book-main-container">
         <Box className="mini-books">
@@ -62,8 +100,14 @@ const Bookview = ({ book }) => {
                 <button className="quantity-button-bookview">+</button>
               </div>
             )}
-            <Button variant="contained" className="buttons button2">
-              <FavoriteIcon className="favButton" />
+            <Button
+              variant="contained"
+              className="buttons button2"
+              onClick={() => {
+                addToWishlist(book._id);
+              }}
+            >
+              <FavoriteIcon className="favButton" sx={{ wishlisted }} />
               Wishlist
             </Button>
           </Box>

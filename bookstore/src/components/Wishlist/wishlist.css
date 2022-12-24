@@ -1,0 +1,51 @@
+.main-container-Wishlist {
+  display: flex;
+  width: 65vw;
+  margin-left: 6%;
+  margin-top: 2%;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #e4e4e4;
+}
+
+.All-Wishlist-books {
+  display: flex;
+  flex-direction: column;
+}
+
+.Wishlist-single-div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.Wishlist-book-count {
+  display: flex;
+  align-items: flex-start;
+  background-color: #e4e4e4;
+}
+.Wishlist-count-label {
+  margin-left: 6%;
+  padding: 1% 0px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.book-details-Wishlist {
+  display: flex;
+  gap: 5%;
+  padding-bottom: 2%;
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 50%;
+}
+.delete-icon-Wishlist {
+  margin-right: 3%;
+  margin-top: 2%;
+}
+
+.Wishlist-book-details {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}

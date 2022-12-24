@@ -89,21 +89,26 @@ function Header() {
               />
             </Search>
           </Box>
-          <Box
-            className="cartLogoDiv"
-            onClick={() => {
-              navigate("/cart");
-            }}
-          >
+          <Box className="cartLogoDiv">
             <div className="iconBox1">
               <Person2OutlinedIcon />
               <span>Profile</span>
             </div>
-            <div className="iconBox1">
+            <div
+              className="iconBox1"
+              onClick={() => {
+                navigate("/wishlist");
+              }}
+            >
               <FavoriteIcon />
-              <span>Whishlist</span>
+              <span>Wishlist</span>
             </div>
-            <div className="iconBox1">
+            <div
+              className="iconBox1"
+              onClick={() => {
+                navigate("/cart");
+              }}
+            >
               <AddShoppingCartOutlinedIcon />
               <span>Cart</span>
             </div>
