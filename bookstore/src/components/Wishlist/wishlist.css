@@ -31,21 +31,11 @@
   font-weight: 500;
 }
 
-.book-details-Wishlist {
-  display: flex;
-  gap: 5%;
-  padding-bottom: 2%;
-  margin-left: 5%;
-  margin-top: 2%;
-  width: 50%;
-}
 .delete-icon-Wishlist {
   margin-right: 3%;
   margin-top: 2%;
 }
 
-.Wishlist-book-details {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
+.incart-discount {
+  font-size: 0.8rem;
 }

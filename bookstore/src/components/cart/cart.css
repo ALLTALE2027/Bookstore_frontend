@@ -1,18 +1,10 @@
-.main-container-cart {
-  display: flex;
-  width: 65vw;
-  margin-left: 6%;
-  margin-top: 2%;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .first-div {
   display: flex;
   width: 100%;
   flex-direction: column;
   border: 1px solid #dcdcdc;
   padding-bottom: 3%;
+  margin-bottom: 2%;
 }
 .mycart-location {
   display: flex;
@@ -43,11 +35,7 @@
   gap: 5%;
   padding-bottom: 2%;
 }
-.book-details {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-}
+
 .book-name-cart {
   text-align: left;
 }
@@ -66,13 +54,6 @@
 }
 .incart-discount {
   font-size: 0.8rem;
-}
-
-.quantity-buttons {
-  display: flex;
-  margin-left: 17.5%;
-  gap: 5%;
-  padding-bottom: 3%;
 }
 
 .quantity-button-cart {
@@ -106,14 +87,6 @@
   margin-left: 81%;
   background: #3371b5 0% 0% no-repeat padding-box;
   width: 16%;
-}
-.order-btn-cart {
-  border-radius: 2px;
-  background-color: transparent;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin: 4% 0;
 }
 
 .second-div {

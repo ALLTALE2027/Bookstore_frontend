@@ -1,13 +1,3 @@
-.main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 85px;
-  width: 100%;
-  /* margin: 0 8%; */
-}
-
 .change-display {
   display: inline-block;
   /* margin-left: 8%;

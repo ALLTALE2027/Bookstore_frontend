@@ -9,8 +9,32 @@ import "./Book.css";
 import BookImage from "./bookimage.png";
 import { fontSize } from "@mui/system";
 import Star from "@mui/icons-material/StarBorderPurple500Sharp";
+import { makeStyles } from "@mui/styles";
+
+const useStyle = makeStyles({
+  bookNameClass: {
+    display: "flex",
+    alignItems: "flex-start",
+    padding: "0",
+    paddingTop: "4%",
+    paddingLeft: "18%",
+    fontSize: "0.9rem",
+    fontFamily: [
+      "Franklin Gothic Medium",
+      "Arial Narrow",
+      "Arial",
+      "sans-serif",
+    ],
+  },
+  ["@media only screen and (min-width: 320px) and (max-width: 480px)"]: {
+    bookNameClass: {
+      fontSize: "0.75rem",
+    },
+  },
+});
 
 function Books({ book, bookView }) {
+  const classes = useStyle();
   return (
     <Card className="mainContainer-card">
       <CardContent className="contentClass">
@@ -22,7 +46,7 @@ function Books({ book, bookView }) {
             onClick={() => bookView(book)}
           />
         </Box>
-        <Box className="book-name-class">{book.bookName}</Box>
+        <Box className={classes.bookNameClass}>{book.bookName}</Box>
         <Box className="book-name-class book-author-class">{book.author}</Box>
         <Box className="book-name-class book ratingBox">
           <Box className="greenBox">

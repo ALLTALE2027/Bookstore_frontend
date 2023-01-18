@@ -9,8 +9,50 @@ import cartBook from "./mini-book-cart.png";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import "./wishlist.css";
 import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@mui/styles";
+import Footer from "../Footer/Footer";
+
+const useStyle = makeStyles({
+  "Wishlist-book-details": {
+    display: "flex",
+    flexDirection: "column",
+    width: "40%",
+  },
+  "book-details-Wishlist": {
+    display: "flex",
+    gap: "5%",
+    paddingBottom: "2%",
+    marginLeft: "5%",
+    marginTop: "2%",
+    width: "50%",
+  },
+  "incart-price": {
+    fontSize: "1rem",
+    textAlign: "left",
+  },
+  ["@media only screen and (min-width:481px) and (max-width:768px)"]: {
+    "Wishlist-book-details": {
+      width: "50%",
+    },
+    "book-details-Wishlist": {
+      width: "70%",
+    },
+  },
+  ["@media only screen and (min-width:320px) and (max-width:480px)"]: {
+    "Wishlist-book-details": {
+      width: "55%",
+    },
+    "book-details-Wishlist": {
+      width: "77%",
+    },
+    "incart-price": {
+      fontSize: "0.8rem",
+    },
+  },
+});
 
 const Wishlist = () => {
+  const classes = useStyle();
   const [bookWishlisted, setBookWishlisted] = useState([]);
   const navigate = useNavigate();
   const getWishlist = async () => {
@@ -44,15 +86,15 @@ const Wishlist = () => {
         <div className="All-Wishlist-books">
           {bookWishlisted.map((book) => (
             <div key={book._id} className="Wishlist-single-div">
-              <div className="book-details-Wishlist">
+              <div className={classes["book-details-Wishlist"]}>
                 <div className="change-display-left">
                   <img src={cartBook} alt="cart book" />
                 </div>
-                <div className="Wishlist-book-details">
+                <div className={classes["Wishlist-book-details"]}>
                   <div className="book-name-cart">{book.bookName}</div>
                   <div className="incart-author"> by {book.author}</div>
-                  <div className="incart-price">
-                    <span className="incart-price">Rs.1500 </span>
+                  <div className={classes["incart-price"]}>
+                    <span className={classes["incart-price"]}>Rs.1500 </span>
                     <span className="priceBox1-display incart-discount">
                       Rs.{book.price}
                     </span>
@@ -71,6 +113,7 @@ const Wishlist = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

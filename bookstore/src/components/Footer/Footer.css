@@ -1,0 +1,11 @@
+.footerClass {
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: start;
+  padding-left: 20%;
+  line-height: 2.5rem;
+  background-color: #2e1d1e;
+  color: aliceblue;
+}

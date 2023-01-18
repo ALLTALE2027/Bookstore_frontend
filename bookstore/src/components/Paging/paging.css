@@ -1,8 +1,11 @@
-.main-container-pagination {
-  margin-top: 5%;
-  margin-left: 6%;
+.nav-element-inside-Pagination {
+  width: 50% !important;
 }
-
+.nav-element-inside-Pagination > nav {
+  width: 50% !important;
+}
 li {
   margin: 0px 1%;
 }
+
+/* sx={{  }} */

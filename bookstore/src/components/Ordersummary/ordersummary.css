@@ -1,0 +1,15 @@
+.btn-checkout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout-btn-order {
+  border-radius: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 2% 0;
+  width: 7rem;
+  background: #3371b5 0% 0% no-repeat padding-box;
+  margin-right: 6%;
+}

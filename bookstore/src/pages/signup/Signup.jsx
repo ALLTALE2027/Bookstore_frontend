@@ -1,8 +1,46 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { SignupApi } from "../../services/userservices";
+import { makeStyles } from "@mui/styles";
+
+const useStyle = makeStyles({
+  "login-box": {
+    position: "absolute",
+    top: "22vh",
+    left: "50vw",
+    width: "28vw",
+    height: "425px",
+    background: "#ffffff 0% 0% no-repeat padding-box",
+    boxShadow: "0px 5px 15px #00000029",
+    border: "1px solid #e4e4e4",
+    borderRadius: "6px",
+    opacity: 1,
+  },
+  ["@media only screen and (min-width:320px) and (max-width:480px)"]: {
+    "login-box": {
+      left: "30vw",
+      width: "50vw",
+    },
+  },
+  ["@media only screen and (min-width:481px) and (max-width:768px)"]: {
+    "login-box": {
+      width: "50vw",
+      left: "30vw",
+    },
+    "login-divider": {
+      left: "16%",
+    },
+  },
+  ["@media only screen and (min-width:769px) and (max-width:1024px)"]: {
+    "login-box": {
+      width: "40vw",
+      left: "50vw",
+    },
+  },
+});
 
 const Signup = ({ logIn, signUp }) => {
+  const classes = useStyle();
   const [userDetails, setUserDetails] = useState({
     fullname: "",
     email: "",
@@ -76,7 +114,7 @@ const Signup = ({ logIn, signUp }) => {
   };
   return (
     <>
-      <div className="login-box">
+      <div className={classes["login-box"]}>
         <button className="login-btn" onClick={logIn}>
           Login
         </button>
@@ -118,6 +156,7 @@ const Signup = ({ logIn, signUp }) => {
           onChange={handleChange}
           error={passwordError}
           helperText={passwordmessage}
+          type="password"
         />{" "}
         <TextField
           className="email-input Mobilenum-input"

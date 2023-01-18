@@ -65,3 +65,21 @@ export const removeFromWishlistAPI = (bookid) => {
   );
   return response;
 };
+
+export const addAddressAPI = (addressDetails) => {
+  let response = axios.post(
+    `http://localhost:3000/api/v1/address`,
+    addressDetails,
+    headerConfig
+  );
+  return response;
+};
+
+export const checkoutCart = (cartId) => {
+  let response = axios.post(
+    `http://localhost:3000/api/v1/cart/purchase/${cartId}`,
+    {},
+    headerConfig
+  );
+  return response;
+};
